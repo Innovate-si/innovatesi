@@ -26,6 +26,15 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      {/* Logo Section */}
+      <div className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-sm z-50 py-4 px-6">
+        <div className="container mx-auto">
+          <h1 className="text-2xl font-bold text-primary">
+            Innovate
+          </h1>
+        </div>
+      </div>
+
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center bg-gradient-to-b from-secondary to-white px-4">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81')] bg-cover bg-center opacity-5" />
