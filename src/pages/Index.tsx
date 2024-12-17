@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, BarChart2, Globe, Rocket } from "lucide-react";
+import { ArrowRight, BarChart2, Globe2, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -24,6 +24,11 @@ const Index = () => {
 
     return () => observer.disconnect();
   }, []);
+
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById('services');
+    servicesSection?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -72,7 +77,7 @@ const Index = () => {
                   We help companies scale their digital presence and boost sales, regardless of their platform or tools.
                 </p>
                 <div className="flex gap-4 pt-4">
-                  <Button size="lg" className="bg-accent hover:bg-accent/90">
+                  <Button size="lg" className="bg-accent hover:bg-accent/90" onClick={scrollToServices}>
                     Get Started <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                   <Link to="/revops-explained">
