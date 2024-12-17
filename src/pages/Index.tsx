@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Navigation from "@/components/layout/Navigation";
 import HeroSection from "@/components/sections/HeroSection";
 import ServicesSection from "@/components/sections/ServicesSection";
+import IndustryLeadershipSection from "@/components/sections/IndustryLeadershipSection";
 import ContactSection from "@/components/sections/ContactSection";
 
 const Index = () => {
@@ -36,6 +37,7 @@ const Index = () => {
       <main className="pt-16">
         <HeroSection onGetStarted={scrollToServices} />
         <ServicesSection />
+        <IndustryLeadershipSection />
         <ContactSection />
       </main>
     </div>
