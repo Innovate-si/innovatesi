@@ -35,27 +35,69 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center bg-gradient-to-b from-secondary to-white px-4">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81')] bg-cover bg-center opacity-5" />
-        <div className="container mx-auto text-center z-10">
+      {/* Hero Section with 3D Depth */}
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* 3D Layered Background */}
+        <div className="absolute inset-0">
+          {/* Layer 1 - Base gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-secondary via-white to-accent/10" />
+          
+          {/* Layer 2 - Geometric shapes */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 0.1, scale: 1 }}
+            transition={{ duration: 1 }}
+            className="absolute inset-0"
+          >
+            <div className="absolute top-20 left-20 w-64 h-64 bg-accent/20 rounded-full blur-3xl" />
+            <div className="absolute bottom-20 right-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+          </motion.div>
+          
+          {/* Layer 3 - Dot pattern */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,#9747FF_1px,transparent_0)] bg-[length:40px_40px] opacity-20" />
+        </div>
+
+        {/* Content */}
+        <div className="container mx-auto text-center z-10 px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="relative"
           >
-            <span className="inline-block px-4 py-1 mb-4 text-sm font-medium bg-accent/10 text-accent rounded-full">
+            <motion.span
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="inline-block px-4 py-1 mb-4 text-sm font-medium bg-accent/10 text-accent rounded-full backdrop-blur-sm"
+            >
               RevOps & RevTech Experts
-            </span>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-primary">
+            </motion.span>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="text-5xl md:text-7xl font-bold mb-6 text-primary [text-shadow:_0_4px_8px_rgb(0_0_0_/_10%)]"
+            >
               Accelerate Your Growth
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
+              className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto"
+            >
               We help companies scale their digital presence and boost sales, regardless of their platform or tools.
-            </p>
-            <Button size="lg" className="bg-accent hover:bg-accent/90">
-              Get Started <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+            >
+              <Button size="lg" className="bg-accent hover:bg-accent/90 shadow-lg hover:shadow-xl transition-all">
+                Get Started <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </motion.div>
           </motion.div>
         </div>
       </section>
