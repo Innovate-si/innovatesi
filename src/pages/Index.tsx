@@ -157,6 +157,7 @@ const Index = () => {
               
               <div className="grid md:grid-cols-2 gap-12">
                 <div className="space-y-6">
+                <div className="space-y-6 bg-white p-6 rounded-xl shadow-sm">
                   <div className="flex items-center gap-4">
                     <div className="bg-accent/10 w-12 h-12 rounded-xl flex items-center justify-center">
                       <Mail className="h-6 w-6 text-accent" />
@@ -175,36 +176,12 @@ const Index = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold">Call Us</h3>
-                      <p className="text-muted-foreground">+386 (0)1 234 5678</p>
+                      <a href="tel:+38640564570" className="text-accent hover:underline">
+                        +386 40 564 570
+                      </a>
                     </div>
                   </div>
                 </div>
-
-                <div className="space-y-6 bg-white p-6 rounded-xl shadow-sm">
-                <div className="flex items-center gap-4">
-                  <div className="bg-accent/10 w-12 h-12 rounded-xl flex items-center justify-center">
-                    <Mail className="h-6 w-6 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold">Email Us</h3>
-                    <a href="mailto:artur@innovate.si" className="text-accent hover:underline">
-                      artur@innovate.si
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-4">
-                  <div className="bg-accent/10 w-12 h-12 rounded-xl flex items-center justify-center">
-                    <Phone className="h-6 w-6 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold">Call Us</h3>
-                    <a href="tel:+38640564570" className="text-accent hover:underline">
-                      +386 40 564 570
-                    </a>
-                  </div>
-                </div>
-              </div>
               </div>
             </div>
           </div>
