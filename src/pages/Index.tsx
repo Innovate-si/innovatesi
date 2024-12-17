@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, BarChart2, Globe, Rocket, Users } from "lucide-react";
+import { ArrowRight, BarChart2, Globe, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
@@ -36,16 +36,16 @@ const Index = () => {
             transition={{ duration: 0.8 }}
           >
             <span className="inline-block px-4 py-1 mb-4 text-sm font-medium bg-accent/10 text-accent rounded-full">
-              RevOps & RevTech Experts
+              RevOps & RevTech Strokovnjaki
             </span>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 text-primary">
-              Accelerate Your Growth
+              Pospešite Svojo Rast
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              We help companies scale their digital presence and boost sales, regardless of their platform or tools.
+              Pomagamo podjetjem povečati njihovo digitalno prisotnost in prodajo, ne glede na platformo ali orodja.
             </p>
             <Button size="lg" className="bg-accent hover:bg-accent/90">
-              Get Started <ArrowRight className="ml-2 h-4 w-4" />
+              Začnite Zdaj <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </motion.div>
         </div>
@@ -56,11 +56,11 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="text-center mb-16 reveal">
             <span className="inline-block px-4 py-1 mb-4 text-sm font-medium bg-primary/10 text-primary rounded-full">
-              Our Services
+              Naše Storitve
             </span>
-            <h2 className="text-4xl font-bold mb-4">Comprehensive Solutions</h2>
+            <h2 className="text-4xl font-bold mb-4">Celovite Rešitve</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              From e-commerce optimization to digital platform development, we provide end-to-end solutions for your business growth.
+              Od optimizacije e-trgovine do razvoja digitalnih platform, zagotavljamo celovite rešitve za rast vašega podjetja.
             </p>
           </div>
 
@@ -89,14 +89,14 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center reveal">
             <span className="inline-block px-4 py-1 mb-4 text-sm font-medium bg-accent/10 text-accent rounded-full">
-              Located in Ljubljana, Slovenia
+              Nahajamo se v Ljubljani, Slovenija
             </span>
-            <h2 className="text-4xl font-bold mb-6">Let's Work Together</h2>
+            <h2 className="text-4xl font-bold mb-6">Sodelujmo Skupaj</h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Ready to take your business to the next level? Our team of experts is here to help you achieve your goals.
+              Ste pripravljeni dvigniti svoje poslovanje na novo raven? Naša ekipa strokovnjakov vam bo pomagala doseči vaše cilje.
             </p>
             <Button variant="outline" size="lg" className="bg-white hover:bg-accent hover:text-white">
-              Contact Us <ArrowRight className="ml-2 h-4 w-4" />
+              Kontaktirajte Nas <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>
         </div>
@@ -108,18 +108,18 @@ const Index = () => {
 const services = [
   {
     icon: Globe,
-    title: "E-commerce Excellence",
-    description: "Optimize your online store performance and increase conversions across any platform.",
+    title: "Odličnost v E-trgovini",
+    description: "Optimizirajte uspešnost vaše spletne trgovine in povečajte konverzije na katerikoli platformi.",
   },
   {
     icon: BarChart2,
-    title: "RevOps Strategy",
-    description: "Align your revenue operations for maximum efficiency and growth.",
+    title: "RevOps Strategija",
+    description: "Uskladite svoje prihodkovne operacije za maksimalno učinkovitost in rast.",
   },
   {
     icon: Rocket,
-    title: "Digital Acceleration",
-    description: "Transform your digital presence and accelerate your business growth.",
+    title: "Digitalna Pospeševanje",
+    description: "Preoblikujte svojo digitalno prisotnost in pospešite rast vašega podjetja.",
   },
 ];
 
