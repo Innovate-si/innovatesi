@@ -37,7 +37,7 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-16">
             <a href="#home" className="text-xl font-bold text-primary flex items-center gap-2">
-              <Globe className="h-6 w-6 text-accent" />
+              <Globe2 className="h-6 w-6 text-accent" />
               Innovate.si
             </a>
             <div className="flex items-center gap-8">
@@ -157,13 +157,14 @@ const Index = () => {
           </div>
         </section>
       </main>
+
     </div>
   );
 };
 
 const services = [
   {
-    icon: Globe,
+    icon: Globe2,
     title: "E-commerce Excellence",
     description: "Optimize your online store performance and increase conversions across any platform.",
   },
