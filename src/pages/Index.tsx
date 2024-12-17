@@ -2,13 +2,6 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, BarChart2, Globe, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { 
-  Sidebar, 
-  SidebarContent, 
-  SidebarMenu, 
-  SidebarMenuItem, 
-  SidebarMenuButton 
-} from "@/components/ui/sidebar";
 
 const Index = () => {
   useEffect(() => {
@@ -32,41 +25,32 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="flex min-h-screen bg-background">
-      {/* Side Navigation */}
-      <Sidebar>
-        <SidebarContent>
-          <SidebarMenu>
-            <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <a href="#home" className="flex items-center gap-2">
-                  <Globe className="h-4 w-4" />
-                  <span>Home</span>
-                </a>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-            <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <a href="#services" className="flex items-center gap-2">
-                  <BarChart2 className="h-4 w-4" />
-                  <span>Services</span>
-                </a>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-            <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <a href="#contact" className="flex items-center gap-2">
-                  <Rocket className="h-4 w-4" />
-                  <span>Contact</span>
-                </a>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-          </SidebarMenu>
-        </SidebarContent>
-      </Sidebar>
+    <div className="min-h-screen bg-background">
+      {/* Top Navigation */}
+      <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-sm z-50 border-b">
+        <div className="container mx-auto px-6">
+          <div className="flex items-center justify-between h-16">
+            <a href="#home" className="text-xl font-bold text-primary flex items-center gap-2">
+              <Globe className="h-6 w-6 text-accent" />
+              Innovate.si
+            </a>
+            <div className="flex items-center gap-8">
+              <a href="#home" className="text-sm font-medium hover:text-accent transition-colors">
+                Home
+              </a>
+              <a href="#services" className="text-sm font-medium hover:text-accent transition-colors">
+                Services
+              </a>
+              <a href="#contact" className="text-sm font-medium hover:text-accent transition-colors">
+                Contact
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
 
       {/* Main Content */}
-      <main className="flex-1">
+      <main className="pt-16">
         {/* Hero Section */}
         <section id="home" className="min-h-screen flex items-center">
           <div className="container mx-auto grid md:grid-cols-2 gap-12 px-6">
