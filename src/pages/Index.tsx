@@ -2,11 +2,7 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, BarChart2, Globe2, Rocket, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import { toast } from "sonner";
 
 const Index = () => {
   useEffect(() => {
@@ -155,31 +151,28 @@ const Index = () => {
                 Ready to take your business to the next level? Our team of experts is here to help you achieve your goals.
               </p>
               
-              <div className="grid md:grid-cols-2 gap-12">
-                <div className="space-y-6">
-                <div className="space-y-6 bg-white p-6 rounded-xl shadow-sm">
-                  <div className="flex items-center gap-4">
-                    <div className="bg-accent/10 w-12 h-12 rounded-xl flex items-center justify-center">
-                      <Mail className="h-6 w-6 text-accent" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold">Email Us</h3>
-                      <a href="mailto:artur@innovate.si" className="text-accent hover:underline">
-                        artur@innovate.si
-                      </a>
-                    </div>
+              <div className="space-y-6 bg-white p-6 rounded-xl shadow-sm">
+                <div className="flex items-center gap-4">
+                  <div className="bg-accent/10 w-12 h-12 rounded-xl flex items-center justify-center">
+                    <Mail className="h-6 w-6 text-accent" />
                   </div>
-                  
-                  <div className="flex items-center gap-4">
-                    <div className="bg-accent/10 w-12 h-12 rounded-xl flex items-center justify-center">
-                      <Phone className="h-6 w-6 text-accent" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold">Call Us</h3>
-                      <a href="tel:+38640564570" className="text-accent hover:underline">
-                        +386 40 564 570
-                      </a>
-                    </div>
+                  <div>
+                    <h3 className="font-semibold">Email Us</h3>
+                    <a href="mailto:artur@innovate.si" className="text-accent hover:underline">
+                      artur@innovate.si
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-4">
+                  <div className="bg-accent/10 w-12 h-12 rounded-xl flex items-center justify-center">
+                    <Phone className="h-6 w-6 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold">Call Us</h3>
+                    <a href="tel:+38640564570" className="text-accent hover:underline">
+                      +386 40 564 570
+                    </a>
                   </div>
                 </div>
               </div>
@@ -187,7 +180,6 @@ const Index = () => {
           </div>
         </section>
       </main>
-
     </div>
   );
 };
