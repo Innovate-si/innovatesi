@@ -79,28 +79,12 @@ const Index = () => {
               transition={{ duration: 0.8 }}
               className="relative hidden md:flex items-center justify-center"
             >
+              <img 
+                src="/photo-1581091226825-a6a2a5aee158" 
+                alt="Professional working on revenue growth"
+                className="rounded-3xl object-cover w-full h-full shadow-xl"
+              />
               <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-3xl" />
-              <div className="relative z-10 p-8">
-                <div className="grid grid-cols-2 gap-4">
-                  {[1, 2, 3, 4].map((i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: i * 0.2 }}
-                      className="bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg"
-                    >
-                      <div className="w-12 h-12 bg-accent/10 rounded-lg mb-4 flex items-center justify-center">
-                        <Globe className="h-6 w-6 text-accent" />
-                      </div>
-                      <h3 className="font-semibold mb-2">Feature {i}</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Innovative solutions for your business growth
-                      </p>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
             </motion.div>
           </div>
         </section>
