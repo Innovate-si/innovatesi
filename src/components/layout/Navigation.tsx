@@ -13,9 +13,6 @@ const Navigation = () => (
           <Link to="/" className="text-sm font-medium hover:text-accent transition-colors">
             Home
           </Link>
-          <Link to="/about" className="text-sm font-medium hover:text-accent transition-colors">
-            About Us
-          </Link>
           <a href="#services" className="text-sm font-medium hover:text-accent transition-colors">
             Services
           </a>
