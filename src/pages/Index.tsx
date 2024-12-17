@@ -1,8 +1,12 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, BarChart2, Globe2, Rocket } from "lucide-react";
+import { ArrowRight, BarChart2, Globe2, Rocket, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { toast } from "sonner";
 
 const Index = () => {
   useEffect(() => {
@@ -140,19 +144,92 @@ const Index = () => {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="min-h-screen flex items-center py-24">
+        <section id="contact" className="min-h-screen flex items-center py-24 bg-secondary/5">
           <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center reveal">
+            <div className="max-w-4xl mx-auto reveal">
               <span className="inline-block px-4 py-1 mb-4 text-sm font-medium bg-accent/10 text-accent rounded-full">
                 Located in Ljubljana, Slovenia
               </span>
               <h2 className="text-4xl font-bold mb-6">Let's Work Together</h2>
-              <p className="text-xl text-muted-foreground mb-8">
+              <p className="text-xl text-muted-foreground mb-12">
                 Ready to take your business to the next level? Our team of experts is here to help you achieve your goals.
               </p>
-              <Button variant="outline" size="lg" className="bg-white hover:bg-accent hover:text-white">
-                Contact Us <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              
+              <div className="grid md:grid-cols-2 gap-12">
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4">
+                    <div className="bg-accent/10 w-12 h-12 rounded-xl flex items-center justify-center">
+                      <Mail className="h-6 w-6 text-accent" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">Email Us</h3>
+                      <a href="mailto:bruno@innovate.si" className="text-accent hover:underline">
+                        bruno@innovate.si
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-4">
+                    <div className="bg-accent/10 w-12 h-12 rounded-xl flex items-center justify-center">
+                      <Phone className="h-6 w-6 text-accent" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">Call Us</h3>
+                      <p className="text-muted-foreground">+386 (0)1 234 5678</p>
+                    </div>
+                  </div>
+                </div>
+
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    const formData = new FormData(e.currentTarget);
+                    const subject = formData.get('subject');
+                    const message = formData.get('message');
+                    const email = formData.get('email');
+                    
+                    // Create mailto link with form data
+                    const mailtoLink = `mailto:bruno@innovate.si?subject=${encodeURIComponent(String(subject))}&body=${encodeURIComponent(`From: ${email}\n\n${message}`)}`;
+                    
+                    // Open email client
+                    window.location.href = mailtoLink;
+                    
+                    // Show success message
+                    toast.success("Opening your email client...");
+                  }}
+                  className="space-y-4 bg-white p-6 rounded-xl shadow-sm"
+                >
+                  <div>
+                    <Input
+                      type="email"
+                      name="email"
+                      placeholder="Your Email"
+                      required
+                      className="w-full"
+                    />
+                  </div>
+                  <div>
+                    <Input
+                      type="text"
+                      name="subject"
+                      placeholder="Subject"
+                      required
+                      className="w-full"
+                    />
+                  </div>
+                  <div>
+                    <Textarea
+                      name="message"
+                      placeholder="Your Message"
+                      required
+                      className="w-full min-h-[150px]"
+                    />
+                  </div>
+                  <Button type="submit" className="w-full bg-accent hover:bg-accent/90">
+                    Send Message <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </form>
+              </div>
             </div>
           </div>
         </section>
