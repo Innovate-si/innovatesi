@@ -26,7 +26,7 @@ const ProcessStepsSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-secondary/30">
+    <section className="py-24 bg-black/5">
       <div className="container mx-auto px-6">
         <div className="text-center space-y-4 mb-16">
           <motion.h2 
