@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, BarChart2, Cog, Users } from "lucide-react";
+import { ArrowLeft, BarChart2, Cog, Users, Globe2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -11,7 +11,7 @@ const RevOpsExplained = () => {
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-16">
             <Link to="/" className="text-xl font-bold text-primary flex items-center gap-2">
-              <Globe className="h-6 w-6 text-accent" />
+              <Globe2 className="h-6 w-6 text-accent" />
               Innovate.si
             </Link>
             <div className="flex items-center gap-8">
