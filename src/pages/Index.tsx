@@ -37,8 +37,8 @@ const Index = () => {
       <Navigation />
       <main className="pt-16">
         <HeroSection onGetStarted={scrollToServices} />
-        <ProcessStepsSection />
         <ServicesSection />
+        <ProcessStepsSection />
         <IndustryLeadershipSection />
         <ContactSection />
       </main>
