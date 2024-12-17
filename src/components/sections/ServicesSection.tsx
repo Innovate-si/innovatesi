@@ -32,22 +32,23 @@ const ServicesSection = () => (
         </p>
       </div>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {services.map((service, index) => (
-        <motion.div
-          key={service.title}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: index * 0.2 }}
-          className="card-hover bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
-        >
-          <div className="bg-accent/10 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
-            <service.icon className="h-6 w-6 text-accent" />
-          </div>
-          <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-          <p className="text-muted-foreground leading-relaxed">{service.description}</p>
-        </motion.div>
-      ))}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map((service, index) => (
+          <motion.div
+            key={service.title}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.2 }}
+            className="card-hover bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            <div className="bg-accent/10 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+              <service.icon className="h-6 w-6 text-accent" />
+            </div>
+            <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+            <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+          </motion.div>
+        ))}
+      </div>
     </div>
   </section>
 );
