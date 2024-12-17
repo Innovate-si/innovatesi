@@ -26,7 +26,7 @@ const ServicesSection = () => (
         <span className="inline-block px-4 py-1 mb-4 text-sm font-medium bg-accent/10 text-accent rounded-full">
           Our Services
         </span>
-        <h2 className="text-4xl font-bold mb-4">Comprehensive Solutions</h2>
+        <h2 className="text-4xl font-bold mb-4">How Can We Help You?</h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
           From e-commerce optimization to digital platform development, we provide end-to-end solutions for your business growth.
         </p>
