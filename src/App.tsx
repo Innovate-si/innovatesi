@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import RevOpsExplained from "./pages/RevOpsExplained";
+import AboutUs from "./pages/AboutUs";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/revops-explained" element={<RevOpsExplained />} />
+            <Route path="/about" element={<AboutUs />} />
           </Routes>
         </BrowserRouter>
       </div>
