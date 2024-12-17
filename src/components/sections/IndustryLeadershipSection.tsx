@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { BarChart2, Cog, Users } from "lucide-react";
+import { BarChart2, Cog, Users, LineChart, ArrowUpRight, Target } from "lucide-react";
 
 const IndustryLeadershipSection = () => {
   return (
@@ -38,6 +38,23 @@ const IndustryLeadershipSection = () => {
                   <span>Improves operational efficiency</span>
                 </li>
               </ul>
+              <div className="mt-6 space-y-4">
+                <h4 className="font-semibold">Key Benefits:</h4>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <LineChart className="h-5 w-5 text-accent mt-1" />
+                    <span>20-30% increase in revenue growth rate</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <ArrowUpRight className="h-5 w-5 text-accent mt-1" />
+                    <span>71% better customer satisfaction scores</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Target className="h-5 w-5 text-accent mt-1" />
+                    <span>15-25% improvement in operational efficiency</span>
+                  </li>
+                </ul>
+              </div>
             </div>
 
             <div className="space-y-6 p-8 bg-background rounded-2xl shadow-lg">
@@ -62,6 +79,23 @@ const IndustryLeadershipSection = () => {
                   <span>Enhances customer experience</span>
                 </li>
               </ul>
+              <div className="mt-6 space-y-4">
+                <h4 className="font-semibold">Implementation Results:</h4>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <LineChart className="h-5 w-5 text-accent mt-1" />
+                    <span>40% reduction in manual data entry</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <ArrowUpRight className="h-5 w-5 text-accent mt-1" />
+                    <span>60% faster reporting and analytics</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Target className="h-5 w-5 text-accent mt-1" />
+                    <span>35% increase in sales productivity</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -69,10 +103,46 @@ const IndustryLeadershipSection = () => {
             <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center">
               <Users className="h-6 w-6 text-accent" />
             </div>
-            <h3 className="text-2xl font-semibold">Why It Matters</h3>
+            <h3 className="text-2xl font-semibold">Why Companies Need RevOps and RevTech</h3>
             <p className="text-muted-foreground">
               In today's digital-first business environment, having aligned revenue operations and the right technology stack is crucial for sustainable growth. Companies that implement RevOps and RevTech solutions see improved collaboration, better customer insights, and accelerated revenue growth.
             </p>
+            <div className="grid md:grid-cols-2 gap-6 mt-6">
+              <div className="space-y-4">
+                <h4 className="font-semibold">Business Impact</h4>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2" />
+                    <span>Unified revenue strategy across all departments</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2" />
+                    <span>Improved forecasting accuracy by up to 98%</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2" />
+                    <span>Reduced customer acquisition costs by 30%</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="space-y-4">
+                <h4 className="font-semibold">Competitive Advantage</h4>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2" />
+                    <span>Faster time-to-market for new initiatives</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2" />
+                    <span>Enhanced customer lifetime value</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2" />
+                    <span>Data-driven decision making capabilities</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
