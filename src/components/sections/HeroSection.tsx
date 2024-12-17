@@ -46,8 +46,8 @@ const HeroSection = ({ onGetStarted }: HeroSectionProps) => (
       >
         <div className="relative w-full h-[600px] rounded-3xl overflow-hidden shadow-xl">
           <img 
-            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
-            alt="Professional working on revenue growth"
+            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+            alt="Team collaborating on RevOps strategy"
             className="object-cover w-full h-full"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20" />
