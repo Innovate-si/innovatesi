@@ -1,7 +1,14 @@
+import { useEffect }I'll implement Template 2 (Creative Agency) with a side navigation, split-screen sections, and modern animations.
+
+<lov-code>
+Let's update the Index.tsx file to implement the creative agency template:
+
+<lov-write file_path="src/pages/Index.tsx">
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, BarChart2, Globe, Rocket } from "lucide-react";
+import { ArrowRight, BarChart2, Globe, Rocket, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Sidebar, SidebarContent, SidebarMenu, SidebarMenuItem, SidebarMenuButton } from "@/components/ui/sidebar";
 
 const Index = () => {
   useEffect(() => {
@@ -25,133 +32,146 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
-      {/* Logo Section */}
-      <div className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-sm z-50 py-4 px-6">
-        <div className="container mx-auto">
-          <h1 className="text-2xl font-bold text-primary">
-            Innovate
-          </h1>
-        </div>
-      </div>
+    <div className="flex min-h-screen bg-background">
+      {/* Side Navigation */}
+      <Sidebar>
+        <SidebarContent>
+          <SidebarMenu>
+            <SidebarMenuItem>
+              <SidebarMenuButton asChild>
+                <a href="#home" className="flex items-center gap-2">
+                  <Globe className="h-4 w-4" />
+                  <span>Home</span>
+                </a>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+            <SidebarMenuItem>
+              <SidebarMenuButton asChild>
+                <a href="#services" className="flex items-center gap-2">
+                  <BarChart2 className="h-4 w-4" />
+                  <span>Services</span>
+                </a>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+            <SidebarMenuItem>
+              <SidebarMenuButton asChild>
+                <a href="#contact" className="flex items-center gap-2">
+                  <Rocket className="h-4 w-4" />
+                  <span>Contact</span>
+                </a>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+          </SidebarMenu>
+        </SidebarContent>
+      </Sidebar>
 
-      {/* Hero Section with 3D Depth */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* 3D Layered Background */}
-        <div className="absolute inset-0">
-          {/* Layer 1 - Base gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-secondary via-white to-accent/10" />
-          
-          {/* Layer 2 - Geometric shapes */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 0.1, scale: 1 }}
-            transition={{ duration: 1 }}
-            className="absolute inset-0"
-          >
-            <div className="absolute top-20 left-20 w-64 h-64 bg-accent/20 rounded-full blur-3xl" />
-            <div className="absolute bottom-20 right-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-          </motion.div>
-          
-          {/* Layer 3 - Dot pattern */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,#9747FF_1px,transparent_0)] bg-[length:40px_40px] opacity-20" />
-        </div>
-
-        {/* Content */}
-        <div className="container mx-auto text-center z-10 px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="relative"
-          >
-            <motion.span
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="inline-block px-4 py-1 mb-4 text-sm font-medium bg-accent/10 text-accent rounded-full backdrop-blur-sm"
-            >
-              RevOps & RevTech Experts
-            </motion.span>
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="text-5xl md:text-7xl font-bold mb-6 text-primary [text-shadow:_0_4px_8px_rgb(0_0_0_/_10%)]"
-            >
-              Accelerate Your Growth
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-              className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto"
-            >
-              We help companies scale their digital presence and boost sales, regardless of their platform or tools.
-            </motion.p>
+      {/* Main Content */}
+      <main className="flex-1">
+        {/* Hero Section */}
+        <section id="home" className="min-h-screen flex items-center">
+          <div className="container mx-auto grid md:grid-cols-2 gap-12 px-6">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 }}
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="flex flex-col justify-center"
             >
-              <Button size="lg" className="bg-accent hover:bg-accent/90 shadow-lg hover:shadow-xl transition-all">
+              <span className="inline-block px-4 py-1 mb-4 text-sm font-medium bg-accent/10 text-accent rounded-full">
+                RevOps & RevTech Experts
+              </span>
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 text-primary">
+                Accelerate Your Growth
+              </h1>
+              <p className="text-xl text-muted-foreground mb-8">
+                We help companies scale their digital presence and boost sales, regardless of their platform or tools.
+              </p>
+              <Button size="lg" className="w-fit bg-accent hover:bg-accent/90">
                 Get Started <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-24 bg-white px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-16 reveal">
-            <span className="inline-block px-4 py-1 mb-4 text-sm font-medium bg-primary/10 text-primary rounded-full">
-              Our Services
-            </span>
-            <h2 className="text-4xl font-bold mb-4">Comprehensive Solutions</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              From e-commerce optimization to digital platform development, we provide end-to-end solutions for your business growth.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2 }}
-                className="card-hover bg-secondary/50 rounded-2xl p-8"
-              >
-                <div className="bg-accent/10 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
-                  <service.icon className="h-6 w-6 text-accent" />
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="relative hidden md:flex items-center justify-center"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-3xl" />
+              <div className="relative z-10 p-8">
+                <div className="grid grid-cols-2 gap-4">
+                  {[1, 2, 3, 4].map((i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: i * 0.2 }}
+                      className="bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg"
+                    >
+                      <div className="w-12 h-12 bg-accent/10 rounded-lg mb-4 flex items-center justify-center">
+                        <Globe className="h-6 w-6 text-accent" />
+                      </div>
+                      <h3 className="font-semibold mb-2">Feature {i}</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Innovative solutions for your business growth
+                      </p>
+                    </motion.div>
+                  ))}
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                <p className="text-muted-foreground">{service.description}</p>
-              </motion.div>
-            ))}
+              </div>
+            </motion.div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Location Section */}
-      <section className="py-24 bg-secondary px-4">
-        <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto text-center reveal">
-            <span className="inline-block px-4 py-1 mb-4 text-sm font-medium bg-accent/10 text-accent rounded-full">
-              Located in Ljubljana, Slovenia
-            </span>
-            <h2 className="text-4xl font-bold mb-6">Let's Work Together</h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Ready to take your business to the next level? Our team of experts is here to help you achieve your goals.
-            </p>
-            <Button variant="outline" size="lg" className="bg-white hover:bg-accent hover:text-white">
-              Contact Us <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+        {/* Services Section */}
+        <section id="services" className="min-h-screen bg-secondary/50 py-24">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16 reveal">
+              <span className="inline-block px-4 py-1 mb-4 text-sm font-medium bg-accent/10 text-accent rounded-full">
+                Our Services
+              </span>
+              <h2 className="text-4xl font-bold mb-4">Comprehensive Solutions</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                From e-commerce optimization to digital platform development, we provide end-to-end solutions for your business growth.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <motion.div
+                  key={service.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.2 }}
+                  className="card-hover bg-white rounded-2xl p-8"
+                >
+                  <div className="bg-accent/10 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+                    <service.icon className="h-6 w-6 text-accent" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                  <p className="text-muted-foreground">{service.description}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="min-h-screen flex items-center py-24">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center reveal">
+              <span className="inline-block px-4 py-1 mb-4 text-sm font-medium bg-accent/10 text-accent rounded-full">
+                Located in Ljubljana, Slovenia
+              </span>
+              <h2 className="text-4xl font-bold mb-6">Let's Work Together</h2>
+              <p className="text-xl text-muted-foreground mb-8">
+                Ready to take your business to the next level? Our team of experts is here to help you achieve your goals.
+              </p>
+              <Button variant="outline" size="lg" className="bg-white hover:bg-accent hover:text-white">
+                Contact Us <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   );
 };
