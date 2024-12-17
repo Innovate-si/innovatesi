@@ -6,16 +6,19 @@ const achievements = [
     icon: Building2,
     title: "Fortune 500 Partners",
     description: "Trusted partner for top 10 Fortune 500 fashion brands, delivering innovative solutions across digital and physical retail channels.",
+    image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=800&q=80"
   },
   {
     icon: Store,
     title: "Omnichannel Expertise",
     description: "Deep expertise in connecting digital and physical retail experiences, creating seamless customer journeys across all touchpoints.",
+    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&q=80"
   },
   {
     icon: ShoppingBag,
     title: "Retail Innovation",
     description: "Pioneering solutions in brick-and-mortar operations, e-commerce platforms, and integrated retail technologies.",
+    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80"
   },
 ];
 
@@ -39,13 +42,23 @@ const IndustryLeadershipSection = () => (
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.2 }}
-            className="card-hover bg-secondary/50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+            className="card-hover bg-secondary/50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
           >
-            <div className="bg-accent/10 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
-              <achievement.icon className="h-6 w-6 text-accent" />
+            <div className="relative h-48 w-full">
+              <img
+                src={achievement.image}
+                alt={achievement.title}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
             </div>
-            <h3 className="text-xl font-semibold mb-3">{achievement.title}</h3>
-            <p className="text-muted-foreground leading-relaxed">{achievement.description}</p>
+            <div className="p-8">
+              <div className="bg-accent/10 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
+                <achievement.icon className="h-6 w-6 text-accent" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">{achievement.title}</h3>
+              <p className="text-muted-foreground leading-relaxed">{achievement.description}</p>
+            </div>
           </motion.div>
         ))}
       </div>
