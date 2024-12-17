@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, BarChart2, Globe, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   useEffect(() => {
@@ -74,9 +75,11 @@ const Index = () => {
                   <Button size="lg" className="bg-accent hover:bg-accent/90">
                     Get Started <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
-                  <Button size="lg" variant="outline">
-                    Learn More
-                  </Button>
+                  <Link to="/revops-explained">
+                    <Button size="lg" variant="outline">
+                      Learn More
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </motion.div>
