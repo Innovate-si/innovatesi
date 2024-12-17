@@ -1,14 +1,14 @@
-import { useEffect }I'll implement Template 2 (Creative Agency) with a side navigation, split-screen sections, and modern animations.
-
-<lov-code>
-Let's update the Index.tsx file to implement the creative agency template:
-
-<lov-write file_path="src/pages/Index.tsx">
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, BarChart2, Globe, Rocket, Menu } from "lucide-react";
+import { ArrowRight, BarChart2, Globe, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Sidebar, SidebarContent, SidebarMenu, SidebarMenuItem, SidebarMenuButton } from "@/components/ui/sidebar";
+import { 
+  Sidebar, 
+  SidebarContent, 
+  SidebarMenu, 
+  SidebarMenuItem, 
+  SidebarMenuButton 
+} from "@/components/ui/sidebar";
 
 const Index = () => {
   useEffect(() => {
