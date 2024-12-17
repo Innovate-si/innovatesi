@@ -60,18 +60,25 @@ const Index = () => {
               transition={{ duration: 0.8 }}
               className="flex flex-col justify-center"
             >
-              <span className="inline-block px-4 py-1 mb-4 text-sm font-medium bg-accent/10 text-accent rounded-full">
-                RevOps & RevTech Experts
-              </span>
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 text-primary">
-                Accelerate Your Growth
-              </h1>
-              <p className="text-xl text-muted-foreground mb-8">
-                We help companies scale their digital presence and boost sales, regardless of their platform or tools.
-              </p>
-              <Button size="lg" className="w-fit bg-accent hover:bg-accent/90">
-                Get Started <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <div className="space-y-6">
+                <span className="inline-block px-4 py-1 text-sm font-medium bg-accent/10 text-accent rounded-full">
+                  RevOps & RevTech Experts
+                </span>
+                <h1 className="text-5xl md:text-7xl font-bold text-primary leading-tight">
+                  Accelerate Your <span className="text-accent">Growth</span>
+                </h1>
+                <p className="text-xl text-muted-foreground max-w-lg">
+                  We help companies scale their digital presence and boost sales, regardless of their platform or tools.
+                </p>
+                <div className="flex gap-4 pt-4">
+                  <Button size="lg" className="bg-accent hover:bg-accent/90">
+                    Get Started <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                  <Button size="lg" variant="outline">
+                    Learn More
+                  </Button>
+                </div>
+              </div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 50 }}
@@ -79,12 +86,14 @@ const Index = () => {
               transition={{ duration: 0.8 }}
               className="relative hidden md:flex items-center justify-center"
             >
-              <img 
-                src="/photo-1581091226825-a6a2a5aee158" 
-                alt="Professional working on revenue growth"
-                className="rounded-3xl object-cover w-full h-full shadow-xl"
-              />
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-3xl" />
+              <div className="relative w-full h-[600px] rounded-3xl overflow-hidden shadow-xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+                  alt="Professional working on revenue growth"
+                  className="object-cover w-full h-full"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20" />
+              </div>
             </motion.div>
           </div>
         </section>
