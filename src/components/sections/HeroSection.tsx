@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 
 interface HeroSectionProps {
   onGetStarted: () => void;
@@ -26,15 +25,10 @@ const HeroSection = ({ onGetStarted }: HeroSectionProps) => (
           <p className="text-xl text-muted-foreground max-w-lg">
             We help companies scale their digital presence and boost sales, regardless of their platform or tools.
           </p>
-          <div className="flex gap-4 pt-4">
+          <div className="pt-4">
             <Button size="lg" className="bg-accent hover:bg-accent/90" onClick={onGetStarted}>
               Get Started <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Link to="/revops-explained">
-              <Button size="lg" variant="outline">
-                Learn More
-              </Button>
-            </Link>
           </div>
         </div>
       </motion.div>
