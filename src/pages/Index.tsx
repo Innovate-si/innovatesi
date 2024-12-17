@@ -163,8 +163,8 @@ const Index = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold">Email Us</h3>
-                      <a href="mailto:bruno@innovate.si" className="text-accent hover:underline">
-                        bruno@innovate.si
+                      <a href="mailto:artur@innovate.si" className="text-accent hover:underline">
+                        artur@innovate.si
                       </a>
                     </div>
                   </div>
@@ -180,55 +180,31 @@ const Index = () => {
                   </div>
                 </div>
 
-                <form
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    const formData = new FormData(e.currentTarget);
-                    const subject = formData.get('subject');
-                    const message = formData.get('message');
-                    const email = formData.get('email');
-                    
-                    // Create mailto link with form data
-                    const mailtoLink = `mailto:bruno@innovate.si?subject=${encodeURIComponent(String(subject))}&body=${encodeURIComponent(`From: ${email}\n\n${message}`)}`;
-                    
-                    // Open email client
-                    window.location.href = mailtoLink;
-                    
-                    // Show success message
-                    toast.success("Opening your email client...");
-                  }}
-                  className="space-y-4 bg-white p-6 rounded-xl shadow-sm"
-                >
-                  <div>
-                    <Input
-                      type="email"
-                      name="email"
-                      placeholder="Your Email"
-                      required
-                      className="w-full"
-                    />
+                <div className="space-y-6 bg-white p-6 rounded-xl shadow-sm">
+                <div className="flex items-center gap-4">
+                  <div className="bg-accent/10 w-12 h-12 rounded-xl flex items-center justify-center">
+                    <Mail className="h-6 w-6 text-accent" />
                   </div>
                   <div>
-                    <Input
-                      type="text"
-                      name="subject"
-                      placeholder="Subject"
-                      required
-                      className="w-full"
-                    />
+                    <h3 className="font-semibold">Email Us</h3>
+                    <a href="mailto:artur@innovate.si" className="text-accent hover:underline">
+                      artur@innovate.si
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-4">
+                  <div className="bg-accent/10 w-12 h-12 rounded-xl flex items-center justify-center">
+                    <Phone className="h-6 w-6 text-accent" />
                   </div>
                   <div>
-                    <Textarea
-                      name="message"
-                      placeholder="Your Message"
-                      required
-                      className="w-full min-h-[150px]"
-                    />
+                    <h3 className="font-semibold">Call Us</h3>
+                    <a href="tel:+38640564570" className="text-accent hover:underline">
+                      +386 40 564 570
+                    </a>
                   </div>
-                  <Button type="submit" className="w-full bg-accent hover:bg-accent/90">
-                    Send Message <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </form>
+                </div>
+              </div>
               </div>
             </div>
           </div>
