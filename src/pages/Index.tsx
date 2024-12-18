@@ -5,6 +5,7 @@ import ProcessStepsSection from "@/components/sections/ProcessStepsSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import IndustryLeadershipSection from "@/components/sections/IndustryLeadershipSection";
 import ContactSection from "@/components/sections/ContactSection";
+import AboutUsSection from "@/components/sections/AboutUsSection";
 
 const Index = () => {
   useEffect(() => {
@@ -39,6 +40,7 @@ const Index = () => {
         <HeroSection onGetStarted={scrollToServices} />
         <ServicesSection />
         <ProcessStepsSection />
+        <AboutUsSection />
         <IndustryLeadershipSection />
         <ContactSection />
       </main>
