@@ -19,61 +19,22 @@ export default {
     },
     extend: {
       colors: {
-        // OPTION 1: Ocean Theme
         primary: {
-          DEFAULT: "#1B3A5C",
+          DEFAULT: "#1A1F2C",
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#E8F1F8",
-          foreground: "#1B3A5C",
+          DEFAULT: "#F1F0FB",
+          foreground: "#1A1F2C",
         },
         accent: {
-          DEFAULT: "#2E8BC0",
+          DEFAULT: "#8B5CF6",
           foreground: "#FFFFFF",
         },
         muted: {
-          DEFAULT: "#F0F7FC",
+          DEFAULT: "#F8F7FE",
           foreground: "#64748B",
         },
-
-        // OPTION 2: Nature Theme
-        // primary: {
-        //   DEFAULT: "#2D4A3E",
-        //   foreground: "#FFFFFF",
-        // },
-        // secondary: {
-        //   DEFAULT: "#F3F7F4",
-        //   foreground: "#2D4A3E",
-        // },
-        // accent: {
-        //   DEFAULT: "#5C9D89",
-        //   foreground: "#FFFFFF",
-        // },
-        // muted: {
-        //   DEFAULT: "#EDF3F0",
-        //   foreground: "#64748B",
-        // },
-
-        // OPTION 3: Sunset Theme
-        // primary: {
-        //   DEFAULT: "#2C1810",
-        //   foreground: "#FFFFFF",
-        // },
-        // secondary: {
-        //   DEFAULT: "#FFF6F4",
-        //   foreground: "#2C1810",
-        // },
-        // accent: {
-        //   DEFAULT: "#E85D3F",
-        //   foreground: "#FFFFFF",
-        // },
-        // muted: {
-        //   DEFAULT: "#FDF0EC",
-        //   foreground: "#64748B",
-        // },
-
-        // Common colors (unchanged)
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
