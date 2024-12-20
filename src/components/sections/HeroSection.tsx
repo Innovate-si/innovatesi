@@ -20,7 +20,7 @@ const HeroSection = ({ onGetStarted }: HeroSectionProps) => (
             RevOps & RevTech Experts
           </span>
           <h1 className="text-5xl md:text-7xl font-bold text-primary leading-tight">
-            Accelerate Your <span className="text-accent">Growth</span>
+            Analyze, perfect and <span className="text-accent">measure</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-lg">
             We help companies scale their digital presence and boost sales, regardless of their platform or tools.
