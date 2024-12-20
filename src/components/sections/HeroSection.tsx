@@ -40,8 +40,8 @@ const HeroSection = ({ onGetStarted }: HeroSectionProps) => (
       >
         <div className="relative w-full h-[600px] rounded-3xl overflow-hidden shadow-xl">
           <img 
-            src="https://images.unsplash.com/photo-1587929501535-1e2d559e8488"
-            alt="Modern factory with robotic arms working on assembly line"
+            src="https://images.unsplash.com/photo-1563986768609-322da13575f3"
+            alt="Digital factory with advanced technology and data visualization"
             className="object-cover w-full h-full"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20" />

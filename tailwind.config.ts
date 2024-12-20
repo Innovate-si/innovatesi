@@ -20,19 +20,19 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#1A1F2C",
+          DEFAULT: "#403E43",
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#F1F0FB",
-          foreground: "#1A1F2C",
+          DEFAULT: "#F0F7FC",
+          foreground: "#403E43",
         },
         accent: {
-          DEFAULT: "#8B5CF6",
+          DEFAULT: "#1EAEDB",
           foreground: "#FFFFFF",
         },
         muted: {
-          DEFAULT: "#F8F7FE",
+          DEFAULT: "#F8F9FA",
           foreground: "#64748B",
         },
         border: "hsl(var(--border))",
