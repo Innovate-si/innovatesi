@@ -9,11 +9,18 @@ interface HeroSectionProps {
 const HeroSection = ({ onGetStarted }: HeroSectionProps) => (
   <section id="home" className="min-h-screen relative">
     <div className="absolute inset-0 w-full h-full">
-      <img 
-        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
-        alt="Business analytics dashboard showing growth and success metrics"
+      <video 
+        autoPlay 
+        muted 
+        loop 
+        playsInline
         className="object-cover w-full h-full"
-      />
+      >
+        <source 
+          src="https://cdn.coverr.co/videos/coverr-data-visualization-and-business-analytics-2741/1080p.mp4" 
+          type="video/mp4"
+        />
+      </video>
       <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/40" />
     </div>
     
