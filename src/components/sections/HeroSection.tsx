@@ -17,7 +17,7 @@ const HeroSection = ({ onGetStarted }: HeroSectionProps) => (
         className="object-cover w-full h-full"
       >
         <source 
-          src="https://cdn.coverr.co/videos/coverr-data-visualization-and-business-analytics-2741/1080p.mp4" 
+          src="https://cdn.coverr.co/videos/coverr-business-analytics-dashboard/preview" 
           type="video/mp4"
         />
       </video>
