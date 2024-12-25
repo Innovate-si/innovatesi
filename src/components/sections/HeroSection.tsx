@@ -9,18 +9,11 @@ interface HeroSectionProps {
 const HeroSection = ({ onGetStarted }: HeroSectionProps) => (
   <section id="home" className="min-h-screen relative">
     <div className="absolute inset-0 w-full h-full">
-      <video 
-        autoPlay 
-        muted 
-        loop 
-        playsInline
+      <img 
+        src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+        alt="Woman using laptop"
         className="object-cover w-full h-full"
-      >
-        <source 
-          src="https://cdn.coverr.co/videos/coverr-temp-sftfwatermarkedvideo00436be495bc341e4b7274f83a560daa2mp4-5896/thumbnail?width=1920" 
-          type="video/mp4"
-        />
-      </video>
+      />
       <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/40" />
     </div>
     
