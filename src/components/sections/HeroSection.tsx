@@ -7,18 +7,15 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({ onGetStarted }: HeroSectionProps) => (
-  <section id="home" className="min-h-screen relative overflow-hidden">
-    {/* Background Image */}
-    <div className="absolute inset-0 w-full h-full">
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/analytics-bg.jpg')",
-          opacity: 0.3
-        }}
+  <section id="home" className="min-h-screen relative">
+    <div className="absolute inset-0">
+      <img 
+        src="/team-meeting.jpg" 
+        alt="Team looking at computer" 
+        className="w-full h-full object-cover"
       />
-      {/* Overlay gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/80 to-accent/20" />
+      {/* Simple dark overlay for text readability */}
+      <div className="absolute inset-0 bg-black/50" />
     </div>
     
     <div className="container mx-auto relative z-10 h-screen flex items-center px-6">
