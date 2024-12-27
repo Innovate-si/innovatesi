@@ -10,8 +10,8 @@ const HeroSection = ({ onGetStarted }: HeroSectionProps) => (
   <section id="home" className="min-h-screen relative">
     <div className="absolute inset-0 w-full h-full">
       <img 
-        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80"
-        alt="Woman using laptop"
+        src="https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&q=80"
+        alt="Abstract blue geometric pattern"
         className="object-cover w-full h-full"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/40" />
