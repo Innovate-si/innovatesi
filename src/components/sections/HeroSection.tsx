@@ -7,13 +7,36 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({ onGetStarted }: HeroSectionProps) => (
-  <section id="home" className="min-h-screen relative">
+  <section id="home" className="min-h-screen relative overflow-hidden">
+    {/* Background Layers */}
     <div className="absolute inset-0 w-full h-full">
-      <img 
-        src="https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&q=80"
-        alt="Abstract blue geometric pattern"
-        className="object-cover w-full h-full"
-      />
+      {/* Base gradient layer */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#221F26] via-[#403E43] to-[#1EAEDB]/20" />
+      
+      {/* Animated geometric shapes */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 0.1, scale: 1 }}
+        transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
+        className="absolute inset-0"
+      >
+        <div className="absolute top-20 left-20 w-72 h-72 bg-accent/30 rounded-full blur-3xl" />
+        <div className="absolute bottom-40 right-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
+      </motion.div>
+
+      {/* Floating particles */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 0.2, y: -20 }}
+        transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
+        className="absolute inset-0"
+      >
+        <div className="absolute top-1/4 left-1/3 w-4 h-4 bg-accent rounded-full blur-sm" />
+        <div className="absolute top-1/2 right-1/4 w-6 h-6 bg-accent/50 rounded-full blur-sm" />
+        <div className="absolute bottom-1/3 left-1/2 w-3 h-3 bg-accent/70 rounded-full blur-sm" />
+      </motion.div>
+
+      {/* Overlay gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/40" />
     </div>
     
