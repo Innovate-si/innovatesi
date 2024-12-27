@@ -14,11 +14,11 @@ const HeroSection = ({ onGetStarted }: HeroSectionProps) => (
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('/analytics-bg.jpg')",
-          opacity: 0.15
+          opacity: 0.3
         }}
       />
       {/* Overlay gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/40" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/80 to-accent/20" />
     </div>
     
     <div className="container mx-auto relative z-10 h-screen flex items-center px-6">
@@ -29,20 +29,44 @@ const HeroSection = ({ onGetStarted }: HeroSectionProps) => (
         className="max-w-2xl"
       >
         <div className="space-y-6">
-          <span className="inline-block px-4 py-1 text-sm font-medium bg-accent/10 text-accent rounded-full">
+          <motion.span 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="inline-block px-4 py-1 text-sm font-medium bg-accent/10 text-accent rounded-full"
+          >
             RevOps & RevTech Experts
-          </span>
-          <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
+          </motion.span>
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="text-5xl md:text-7xl font-bold text-white leading-tight"
+          >
             Analyze, perfect and <span className="text-accent">measure</span>
-          </h1>
-          <p className="text-xl text-white/80 max-w-lg">
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+            className="text-xl text-white/80 max-w-lg"
+          >
             We help companies scale their digital presence and boost sales, regardless of their platform or tools.
-          </p>
-          <div className="pt-4">
-            <Button size="lg" className="bg-accent hover:bg-accent/90" onClick={onGetStarted}>
+          </motion.p>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.9 }}
+            className="pt-4"
+          >
+            <Button 
+              size="lg" 
+              className="bg-accent hover:bg-accent/90 transform transition-all duration-300 hover:scale-105" 
+              onClick={onGetStarted}
+            >
               Get Started <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-          </div>
+          </motion.div>
         </div>
       </motion.div>
     </div>
