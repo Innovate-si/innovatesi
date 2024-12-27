@@ -9,12 +9,16 @@ interface HeroSectionProps {
 const HeroSection = ({ onGetStarted }: HeroSectionProps) => (
   <section id="home" className="min-h-screen relative">
     <div className="absolute inset-0">
-      <img 
-        src="/team-meeting.jpg" 
-        alt="Team looking at computer" 
+      <video 
+        autoPlay 
+        loop 
+        muted 
+        playsInline
         className="w-full h-full object-cover"
-      />
-      {/* Simple dark overlay for text readability */}
+      >
+        <source src="/5725950-hd_1920_1080_30fps.mp4" type="video/mp4" />
+      </video>
+      {/* Dark overlay for text readability */}
       <div className="absolute inset-0 bg-black/50" />
     </div>
     
