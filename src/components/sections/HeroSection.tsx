@@ -10,7 +10,7 @@ const HeroSection = ({ onGetStarted }: HeroSectionProps) => (
   <section id="home" className="min-h-screen relative">
     <div className="absolute inset-0 w-full h-full">
       <img 
-        src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80"
         alt="Woman using laptop"
         className="object-cover w-full h-full"
       />
