@@ -19,8 +19,8 @@ const ContactSection = () => (
             </div>
             <div>
               <h3 className="font-semibold">Email Us</h3>
-              <a href="mailto:artur@innovate.si" className="text-accent hover:underline">
-                artur@innovate.si
+              <a href="mailto:bruno@innovate.si" className="text-accent hover:underline">
+                bruno@innovate.si
               </a>
             </div>
           </div>
@@ -30,9 +30,9 @@ const ContactSection = () => (
               <Phone className="h-6 w-6 text-accent" />
             </div>
             <div>
-              <h3 className="font-semibold">Call Us</h3>
-              <a href="tel:+38640564570" className="text-accent hover:underline">
-                +386 40 564 570
+              <h3 className="font-semibold">Book a Call</h3>
+              <a href="https://calendly.com/bruno-innovate/30min" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                Schedule a 30-minute call
               </a>
             </div>
           </div>
