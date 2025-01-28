@@ -10,7 +10,7 @@ const services = [
   {
     icon: BarChart2,
     title: "RevOps Strategy",
-    description: "Unify your sales, marketing, and customer success operations through strategic RevOps implementation. We create seamless workflows, implement advanced CRM solutions, and develop data-driven frameworks to accelerate revenue growth. Our approach includes sales pipeline optimization, marketing automation, and customer journey mapping.",
+    description: "Align your sales, marketing, and customer success teams with a unified RevOps framework designed to drive efficiency and accelerate revenue growth. We streamline workflows, implement cutting-edge CRM solutions, and build data-driven strategies to optimize every stage of your customer journey. Our approach focuses on enhancing lead management and improving deal velocity for predictable growth, deploying targeted marketing campaigns to efficiently nurture leads and boost engagement, and refining key touchpoints to maximize customer satisfaction and retention. With our RevOps expertise, your business achieves seamless collaboration, actionable insights, and sustainable growth.",
   },
   {
     icon: Rocket,
