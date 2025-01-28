@@ -5,7 +5,7 @@ const services = [
   {
     icon: Globe2,
     title: "E-Commerce Growth Solutions",
-    description: "Transform your online retail presence with data-driven strategies. We optimize product listings, streamline checkout processes, and implement advanced analytics to boost conversion rates. Our solutions include AI-powered product recommendations, mobile-first design, and seamless integration with major e-commerce platforms.",
+    description: "Accelerate your online retail success with tailored strategies. From optimizing product listings and simplifying checkouts to leveraging AI-powered recommendations and mobile-first design, we deliver seamless integrations and data-driven solutions that drive conversions and enhance the shopping experience.",
   },
   {
     icon: BarChart2,
