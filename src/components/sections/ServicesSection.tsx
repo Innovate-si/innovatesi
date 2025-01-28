@@ -15,7 +15,7 @@ const services = [
   {
     icon: Rocket,
     title: "Digital Acceleration",
-    description: "Fast-track your digital transformation with cutting-edge solutions. We implement cloud-native architectures, develop scalable applications, and create innovative digital experiences. Our expertise includes AI/ML integration, IoT solutions, and enterprise-grade digital infrastructure modernization.",
+    description: "Fast-track your digital transformation with a comprehensive approach that integrates GTM strategy, product innovation, and advanced technology solutions. We help you develop scalable digital products, craft market-entry plans, and implement cutting-edge technologies like AI/ML and IoT to deliver measurable impact. From product ideation and market positioning to seamless execution and post-launch optimization, we ensure your business achieves innovation, scalability, and sustained growth in a competitive digital landscape",
   },
 ];
 
