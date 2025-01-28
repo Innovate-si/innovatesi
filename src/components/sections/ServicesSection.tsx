@@ -4,7 +4,7 @@ import { Globe2, BarChart2, Rocket } from "lucide-react";
 const services = [
   {
     icon: Globe2,
-    title: "E-commerce Excellence",
+    title: "E-Commerce Growth Solutions",
     description: "Transform your online retail presence with data-driven strategies. We optimize product listings, streamline checkout processes, and implement advanced analytics to boost conversion rates. Our solutions include AI-powered product recommendations, mobile-first design, and seamless integration with major e-commerce platforms.",
   },
   {
